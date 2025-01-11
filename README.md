@@ -1,36 +1,43 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Meu Site Pessoal
 
-## Getting Started
+Este é o meu site pessoal, desenvolvido com o intuito de mostrar minhas habilidades e projetos no desenvolvimento web. Ele serve como uma vitrine para o meu portfólio, onde compartilho informações sobre minha experiência, meus projetos relevantes e as tecnologias que uso no meu dia a dia.
 
-First, run the development server:
+Tecnologias Utilizadas
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+O site foi desenvolvido utilizando as seguintes tecnologias:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Next.js: Framework React para renderização do lado do servidor (SSR) e construção de aplicativos full-stack.
+- TypeScript: Superset de JavaScript que adiciona tipagem estática ao código, proporcionando maior segurança e produtividade no desenvolvimento.
+- Zod: Biblioteca para validação de esquemas e tipos de dados no TypeScript, garantindo maior confiabilidade nas entradas de dados.
+- Tailwind CSS: Framework utilitário para estilização de componentes com classes predefinidas, permitindo um design rápido e responsivo.
+- ShadCN UI: Conjunto de componentes de interface com foco em acessibilidade e customização, facilitando a construção de interfaces elegantes e funcionais.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Funcionalidades
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Portfólio: Mostra projetos relevantes desenvolvidos por mim, incluindo descrições e links para visualização.
+- Sobre Mim: Uma seção com informações sobre minha trajetória profissional e habilidades.
+- Tecnologias: Demonstração das tecnologias que utilizo e meus conhecimentos nas mesmas.
+- Design Responsivo: O site é totalmente responsivo e se adapta a diferentes tamanhos de tela, proporcionando uma ótima experiência de navegação em dispositivos móveis e desktop.
 
-## Learn More
+Como Rodar Localmente
 
-To learn more about Next.js, take a look at the following resources:
+Para rodar este projeto localmente em sua máquina, siga os passos abaixo:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Clone o repositório:
+   git clone https://github.com/seu-usuario/seu-repositorio.git
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+2. Navegue até a pasta do projeto:
+   cd seu-repositorio
 
-## Deploy on Vercel
+3. Instale as dependências:
+   npm install
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+4. Inicie o servidor de desenvolvimento:
+   npm run dev
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+5. Abra o navegador e acesse:
+   http://localhost:3000
+
+Licença
+
+Este projeto está sob a licença MIT. Veja o arquivo LICENSE para mais detalhes.
