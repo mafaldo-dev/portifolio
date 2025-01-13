@@ -60,7 +60,7 @@ const projects: Projetos[] = [
       descricao: 'Site de empregos para profissionais encontrarem seu emprego dos sonhos, e empresas contratarem os melhores profissionais do mercado',
       tecnologias: 'Typescript | NextJs | tailwindCss | shadcn',
       image: [job1, job2, job3, job4, job5, job6, job7],
-      tags: ['React', 'Typescript', 'Node.Js', 'Styled-components'],
+      tags: ['Next.Js', 'Typescript', 'Node.Js', 'Shadcn', 'TailwindCss','Express'],
       link: ''
     },
     {
@@ -69,7 +69,7 @@ const projects: Projetos[] = [
       descricao: 'App mobile de agendamento de coleta de recicláveis',
       tecnologias: 'Typescript | React-Native | Expo',
       image: [],
-      tags: ['React', 'Typescript', 'Node.Js', 'Styled-components'],
+      tags: ['React-native', 'Typescript', 'Expo',],
       link: ''
     },
     {
@@ -78,7 +78,7 @@ const projects: Projetos[] = [
       descricao: 'Landing page de clinica odontologica, pagina estatica',
       tecnologias: 'Javascript | React | Saas',
       image:[sm1, sm2, sm3, sm4],
-      tags:['Javascript | React | Saas'],
+      tags:['Javascript | React | SCSS'],
       link: 'https://smilecompany-zeta-ecru.vercel.app/'
     }
   ];
