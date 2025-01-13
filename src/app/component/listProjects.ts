@@ -17,6 +17,14 @@ import sm2 from '@/images/sm2.png'
 import sm3 from '@/images/sm3.png'
 import sm4 from '@/images/sm4.png'
 
+import job1 from '@/images/job1.png'
+import job2 from '@/images/job2.png'
+import job3 from '@/images/job3.png'
+import job4 from '@/images/job4.png'
+import job5 from '@/images/job5.png'
+import job6 from '@/images/job6.png'
+import job7 from '@/images/job7.png'
+
 export interface Projetos  {
   id: number
   nome: string
@@ -51,7 +59,7 @@ const projects: Projetos[] = [
       nome: 'EmpreGo',
       descricao: 'Site de empregos para profissionais encontrarem seu emprego dos sonhos, e empresas contratarem os melhores profissionais do mercado',
       tecnologias: 'Typescript | NextJs | tailwindCss | shadcn',
-      image: [im1, im2],
+      image: [job1, job2, job3, job4, job5, job6, job7],
       tags: ['React', 'Typescript', 'Node.Js', 'Styled-components'],
       link: ''
     },
@@ -60,7 +68,7 @@ const projects: Projetos[] = [
       nome: 'Recycle.me',
       descricao: 'App mobile de agendamento de coleta de recicláveis',
       tecnologias: 'Typescript | React-Native | Expo',
-      image: [sm1],
+      image: [],
       tags: ['React', 'Typescript', 'Node.Js', 'Styled-components'],
       link: ''
     },
