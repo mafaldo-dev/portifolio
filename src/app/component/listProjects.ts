@@ -78,7 +78,7 @@ const projects: Projetos[] = [
       descricao: 'Landing page de clinica odontologica, pagina estatica',
       tecnologias: 'Javascript | React | Saas',
       image:[sm1, sm2, sm3, sm4],
-      tags:['Javascript | React | SCSS'],
+      tags:['Javascript', 'React', 'SCSS'],
       link: 'https://smilecompany-zeta-ecru.vercel.app/'
     }
   ];
