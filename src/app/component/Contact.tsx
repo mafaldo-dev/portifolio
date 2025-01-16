@@ -1,41 +1,89 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
 import { Textarea } from '@/components/ui/textarea'
 import { useToast } from '@/components/ui/use-toast'
-import { Toaster } from '@/components/ui/toaster'
-import { submitContactForm } from '../actions/contact'
-import { Mail, Phone, MapPin } from 'lucide-react'
+import emailjs from '@emailjs/browser'
+import { tuple, z } from 'zod'
 
-export default function Contact() {
+export default function Contato() {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const { toast } = useToast()
+  const formRef = useRef<HTMLFormElement>(null)
+
+  const schema = z.object({
+    name: z.string().min(1, 'Nome é obrigatório'),
+    email: z.string().email('Email inválido'),
+    subject: z.string().min(1, 'Assunto é obrigatório'),
+    message: z.string().min(1, 'Mensagem é obrigatória'),
+  })
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault()
     setIsSubmitting(true)
 
     const formData = new FormData(event.currentTarget)
-    const result = await submitContactForm(formData)
 
-    setIsSubmitting(false)
+    const validatedFields = schema.safeParse({
+      name: formData.get('name'),
+      email: formData.get('email'),
+      subject: formData.get('subject'),
+      message: formData.get('message'),
+    })
 
-    if (result.success) {
+    if (!validatedFields.success) {
       toast({
-        title: "Mensagem enviada!",
-        description: "Obrigado pelo contato. Retornaremos em breve.",
+        title: 'Erro na validação',
+        description: 'Por favor, preencha todos os campos corretamente.',
+        variant: 'destructive',
       })
-      event.currentTarget.reset()
-    } else {
+      setIsSubmitting(false)
+      return
+    }
+
+    const data = validatedFields.data
+    const templateParams = {
+      from_name: data.name,
+      from_email: data.email,
+      subject: data.subject,
+      message: data.message,
+    }
+
+    try {
+      const result = await emailjs.send(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
+        templateParams,
+        process.env.NEXT_PUBLIC_EMAILJS_USER_ID!
+      )
+      
+      
+      
+      console.log('E-mail enviado com sucesso:', result)
+      alert('Mensagem enviada com sucesso, em breve retornarei o contato.')
       toast({
-        title: "Erro ao enviar mensagem",
-        description: "Por favor, tente novamente mais tarde.",
-        variant: "destructive",
+        title: 'Mensagem enviada!',
+        description: 'Obrigado pelo contato. Retornaremos em breve.',
       })
+      
+
+
+      if (formRef.current) {
+        formRef.current.reset()
+      }
+    } catch (error) {
+      console.error('Erro ao enviar o e-mail:', error)
+      toast({
+        title: 'Erro ao enviar mensagem',
+        description: 'Por favor, tente novamente mais tarde.',
+        variant: 'destructive',
+      })
+    } finally {
+      setIsSubmitting(false)
     }
   }
 
@@ -50,7 +98,7 @@ export default function Contact() {
               <CardDescription>Preencha o formulário abaixo para me enviar uma mensagem</CardDescription>
             </CardHeader>
             <CardContent>
-              <form onSubmit={handleSubmit}>
+              <form onSubmit={handleSubmit} ref={formRef}>
                 <div className="grid gap-4">
                   <div className="grid gap-2">
                     <Label htmlFor="name">Nome</Label>
@@ -66,10 +114,10 @@ export default function Contact() {
                   </div>
                   <div className="grid gap-2">
                     <Label htmlFor="message">Mensagem</Label>
-                    <Textarea style={{resize:'none'}} id="message" name="message" required />
+                    <Textarea style={{resize: 'none'}} id="message" name="message" required />
                   </div>
                 </div>
-                <CardFooter className="px-0 pt-6">
+                <CardFooter className="flex justify-end mt-4">
                   <Button type="submit" disabled={isSubmitting}>
                     {isSubmitting ? 'Enviando...' : 'Enviar Mensagem'}
                   </Button>
@@ -77,31 +125,8 @@ export default function Contact() {
               </form>
             </CardContent>
           </Card>
-          <Card>
-            <CardHeader>
-              <CardTitle>Informações de Contato</CardTitle>
-              <CardDescription>Outras formas de entrar em contato comigo</CardDescription>
-            </CardHeader>
-            <CardContent>
-              <div className="space-y-4">
-                <div className="flex items-center">
-                  <Mail className="mr-2 h-4 w-4" />
-                  <span>03.09gui.mafaldo@gmail.com</span>
-                </div>
-                <div className="flex items-center">
-                  <Phone className="mr-2 h-4 w-4" />
-                  <span>(11) 94923-4824</span>
-                </div>
-                <div className="flex items-center">
-                  <MapPin className="mr-2 h-4 w-4" />
-                  <span>Itaquaquecetuba - São Paulo, SP</span>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
         </div>
       </div>
-      <Toaster />
     </section>
   )
 }

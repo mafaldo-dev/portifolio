@@ -25,6 +25,9 @@ import job5 from '@/images/job5.png'
 import job6 from '@/images/job6.png'
 import job7 from '@/images/job7.png'
 
+import no from '@/images/1000_F_499933117_ZAUBfv3P1HEOsZDrnkbNCt4jc3AodArl.jpg'
+import no2 from '@/images/Image_not_available.png'
+
 export interface Projetos  {
   id: number
   nome: string
@@ -68,7 +71,7 @@ const projects: Projetos[] = [
       nome: 'Recycle.me',
       descricao: 'App mobile de agendamento de coleta de recicláveis',
       tecnologias: 'Typescript | React-Native | Expo',
-      image: [],
+      image: [no, no2],
       tags: ['React-native', 'Typescript', 'Expo',],
       link: ''
     },
