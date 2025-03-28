@@ -25,6 +25,10 @@ import job5 from '@/images/job5.png'
 import job6 from '@/images/job6.png'
 import job7 from '@/images/job7.png'
 
+import cap1 from '@/images/cap1.png'
+import cap2 from '@/images/cap2.png'
+import cap3 from '@/images/cap3.png'
+
 import no from '@/images/1000_F_499933117_ZAUBfv3P1HEOsZDrnkbNCt4jc3AodArl.jpg'
 import no2 from '@/images/Image_not_available.png'
 
@@ -39,8 +43,25 @@ export interface Projetos  {
 }
 
 const projects: Projetos[] = [
+      {
+	id: 1,
+	nome: 'NexusEarth',
+	descricao: 'Motor de busca Ex: "Google, yahoo, bing, mozila"',
+	tecnologias: 'Typescript | Next.js | TailwindCss | Node.js | Express | Redis',
+	image: [cap1, cap2, cap3],
+	tags: ['Next', 'Typescript', 'Node.Js', 'TailwindCss', 'Express', 'Redis'],
+	link: 'https://nexuearth.vercel.app/'
+      },
+      { id: 2,
+        nome: 'EmpreGo',
+        descricao: 'Site de empregos para profissionais encontrarem seu emprego dos sonhos, e empresas contratarem os melhores profissionais do mercado',
+      tecnologias: 'Typescript | NextJs | tailwindCss | shadcn',
+      image: [job1, job2, job3, job4, job5, job6, job7],
+      tags: ['Next.Js', 'Typescript', 'Node.Js', 'Shadcn', 'TailwindCss','Express'],
+      link: ''
+    },
     {
-      id: 1,
+      id: 3,
       nome: 'Eplay',
       descricao: 'Loja de Compra de Jogos para video games e PCs',
       tecnologias: 'Typescript | ReactJs | Styled-components',
@@ -49,7 +70,7 @@ const projects: Projetos[] = [
       link:'https://eplay-blond.vercel.app/'
     },
     {
-      id: 2,
+      id: 4,
       nome: 'Imobiliaria',
       descricao: 'Template para imobiliarias de venda e aluguel de imóveis',
       tecnologias: 'Typescript | ReactJs | Styled-components',
@@ -58,16 +79,8 @@ const projects: Projetos[] = [
       link: 'https://template-imobiliaria.vercel.app/'
     },
     {
-      id: 3,
-      nome: 'EmpreGo',
-      descricao: 'Site de empregos para profissionais encontrarem seu emprego dos sonhos, e empresas contratarem os melhores profissionais do mercado',
-      tecnologias: 'Typescript | NextJs | tailwindCss | shadcn',
-      image: [job1, job2, job3, job4, job5, job6, job7],
-      tags: ['Next.Js', 'Typescript', 'Node.Js', 'Shadcn', 'TailwindCss','Express'],
-      link: ''
-    },
-    {
-      id: 4,
+  
+      id: 5,
       nome: 'Recycle.me',
       descricao: 'App mobile de agendamento de coleta de recicláveis',
       tecnologias: 'Typescript | React-Native | Expo',
@@ -76,7 +89,7 @@ const projects: Projetos[] = [
       link: ''
     },
     {
-      id: 5,
+      id: 6,
       nome: 'Smile Company',
       descricao: 'Landing page de clinica odontologica, pagina estatica',
       tecnologias: 'Javascript | React | Saas',

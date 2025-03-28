@@ -3,7 +3,7 @@ import { Badge } from '@/components/ui/badge'
 
 export default function About() {
   const hardSkills = [
-    "React", "Next.js", "TypeScript", "Node.js", "Express", "Postgres", "SQL Server", "Git & Github", "Docker"
+    "React", "Next.js", "TypeScript", "Node.js", "Express", "TailwindCss", "Postgres", "SQL Server", "Git & Github", "Docker", "Azure"
   ]
   const softSkills = [
     "Trabalho em equipe", "Rapida adaptação", "Grande capacidade na Resolução de problemas", "Comunicativo", "Liderança de equipes"
@@ -21,13 +21,13 @@ export default function About() {
             </CardHeader>
             <CardContent>
               <p className="mb-4">
-                Com mais de 1 ano e 5 meses de experiência em desenvolvimento web, 
+                Com mais de 2 anos de estudos e 1 ano 3 meses de experiência em desenvolvimento de projetos, 
                 especializei-me na criação de aplicações web robustas e escaláveis. 
-                Minha paixão por tecnologia e inovação me impulsiona a estar sempre 
-                atualizado com as mais recentes tendências e melhores práticas do mercado.
+                Minha paixão por tecnologia e inovação me impulsiona a estar sempre em busca de novos desafios e conhecimentos e estar sempre
+                atualizado com as mais recentes tendências, tecnologias e melhores práticas do mercado.
               </p>
               <p>
-                Trabalhei em diversos projetos pessoais, desde o desenvolvimento de aplicativo <strong>mobile</strong> até grandes aplicações <strong>SaaS ERP</strong> para controle e gestao de estoque de micro-empresas, e um <strong>Site de Empregos</strong> que visa
+                Trabalhei em diversos projetos pessoais, desde o desenvolvimento de aplicativo <strong>Mobile</strong> até grandes aplicações como: <strong>NexusEarth</strong>: Motor de busca, simples porem estou trabalhando em melhorias dirariamente. <strong>Keppler ERP:</strong> para controle e gestao de estoque de micro-empresas, e <strong>EmpreGo:</strong> Site de vagas de emprego, que visa
                 facilitar a vida dos profissionais na procura de emprego. E para empresas que buscam grandes talentos no mercado de trabalho, 
                 sempre focando em entregar soluções de alta qualidade que atendam às 
                 necessidades específicas de cada cliente.
