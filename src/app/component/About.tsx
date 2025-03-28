@@ -3,7 +3,7 @@ import { Badge } from '@/components/ui/badge'
 
 export default function About() {
   const hardSkills = [
-    "React", "Next.js", "TypeScript", "Node.js", "Express", "TailwindCss", "Postgres", "SQL Server", "Git & Github", "Docker", "Azure"
+    "React", "Next.js", "TypeScript", "Node.js", "Express", "TailwindCss", "Postgres","C#",".NET", "SQL Server", "Git & Github", "Docker", "Azure"
   ]
   const softSkills = [
     "Trabalho em equipe", "Rapida adaptação", "Grande capacidade na Resolução de problemas", "Comunicativo", "Liderança de equipes"
