@@ -21,7 +21,7 @@ export default function About() {
             </CardHeader>
             <CardContent>
               <p className="mb-4">
-                Com mais de 2 anos de estudos e 1 ano 3 meses de experiência em desenvolvimento de projetos, 
+                Com mais de 2 anos e 7 meses de experiência em desenvolvimento de projetos, 
                 especializei-me na criação de aplicações web robustas e escaláveis. 
                 Minha paixão por tecnologia e inovação me impulsiona a estar sempre em busca de novos desafios e conhecimentos e estar sempre
                 atualizado com as mais recentes tendências, tecnologias e melhores práticas do mercado.
